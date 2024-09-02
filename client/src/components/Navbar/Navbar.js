@@ -5,8 +5,8 @@ import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
 
-import memoriesLogo from '../../images/memoriesLogo.png';
-import memoriesText from '../../images/memoriesText.png';
+import traveltalesLogo from '../../images/traveltalesLogo.png';
+import TravelTales4 from '../../images/TravelTales4.png';
 import useStyles from './styles';
 
 const Navbar = () => {
@@ -37,8 +37,8 @@ const Navbar = () => {
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
             <Link to="/" className={classes.brandContainer}>
-                <img src={memoriesText} alt='icon' height="45px"/>
-                <img className={classes.image} src={memoriesLogo} alt="icon" height="40px" />
+                <img src={TravelTales4} alt='icon' height="65px"/>
+                <img className={classes.image} src={traveltalesLogo} alt="icon" height="40px" />
             </Link>
             <Toolbar className={classes.toolbar}>
                 {user ? (
