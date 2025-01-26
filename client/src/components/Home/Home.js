@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grow, Grid, Paper, AppBar, TextField, Button } from '@material-ui/core';
+import { Container, Grow, Grid, Paper, AppBar, TextField, Button,Autocomplete } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
-import ChipInput from 'material-ui-chip-input';
+
 
 import { getPosts, getPostsBySearch } from '../../actions/posts';
 import Pagination from "../Pagination";
@@ -57,7 +57,7 @@ const Home = () => {
                     <Grid item xs={12} sm={6} md={3}>
                         <AppBar className={classes.appBarSearch} position="static" color="inherit">
                             <TextField name="search" variant="outlined" label="Search Memories" onKeyDown={handleKeyPress} fullWidth value={search} onChange={(e) => setSearch(e.target.value)} />
-                            <ChipInput
+                            <Autocomplete
                                 style={{ margin: '10px 0' }}
                                 value={tags}
                                 onAdd={handleAdd}
